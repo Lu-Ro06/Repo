@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Familiar</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h1>Registro Familiar</h1>
+    <div class="form-container">
+        <form action="proceso.php" method="POST" enctype="multipart/form-data">
+            <label for="id">ID:</label>
+            <input type="text" name="id" placeholder="ID">
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" placeholder="Nombre de la persona">
+
+            <label for="parentesco">Parentesco:</label>
+            <input type="text" name="parentesco" placeholder="Padre, Madre, Hermano...">
+
+            <label for="foto">Subir Imagen:</label>
+            <input type="file" name="foto">
+
+            <button type="submit" name="registrar">Registrar</button>
+            <button type="submit" name="eliminar">Eliminar</button>
+            <button type="submit" name="modificar">Modificar</button>
+        </form>
+    </div>
+
+    <h2>Listado Familiar</h2>
+    <div class="listado-container">
+        <?php include 'mostrar.php'; ?> 
+    </div>
+</body>
+</html>
