@@ -1,85 +1,140 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #e5ebe9;
-    margin: 0;
-    padding: 0;
+  background-image: linear-gradient(
+    23deg,
+    hsl(49deg 100% 69%) 0%,
+    hsl(16deg 80% 61%) 2%,
+    hsl(330deg 81% 34%) 12%,
+    hsl(259deg 100% 15%) 50%,
+    hsl(212deg 100% 25%) 88%,
+    hsl(197deg 100% 30%) 98%,
+    hsl(183deg 79% 36%) 100%
+  );
+  height: 100vh;
 }
 
-h1, h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+.button {
+  border: none;
+  padding: 0.625em;
+  border-radius: 0.5em;
+  cursor: pointer;
 }
 
-.form-container {
-    width: 50%;
-    margin: 30px auto;
-    background: #aed0d1;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.button:hover {
+  filter: brightness(0.9);
 }
 
-.form-container label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
+.button:active {
+  transform: translateY(2px);
 }
 
-.form-container input[type="text"], 
-.form-container input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #6e6d6d;
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
+.person-selector {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 3em auto 1em;
+  max-width: 40em;
 }
 
-.form-container button {
-    background-color: #06c410;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px 0;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease-in-out;
+.person-selector-button {
+  width: 100%;
+  background-color: #15202b;
+  color: #fff;
+  font-size: 1.1em;
 }
 
-.form-container button:hover {
-    background-color: #45a049;
+.active-person {
+  background: #08529d;
+  box-shadow: 0 0 0.5em 0.1em #c3c3c333;
 }
 
-
-.listado-container {
-    width: 70%;
-    margin: 20px auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.chat-container {
+  background: #15202b;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 0.5em;
+  padding: 0.5em 1.25em;
+  margin: auto;
+  max-width: 37.5em;
+  height: 37.5em;
+  box-shadow: 0 0 1.25em 0.5em #c3c3c333;
 }
 
-.listado-container img {
-    width: 100px;
-    height: 100px;
-    border-radius: 8px;
-    margin: 10px 0;
+.chat-header {
+  margin-bottom: 1em;
+  color: #fff;
 }
 
-.listado-container p {
-    margin: 10px 0;
-    font-size: 14px;
-    color: #555;
+.chat-header h2 {
+  font-size: 1.25em;
+  font-weight: bold;
 }
 
-.listado-container hr {
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 20px 0;
+.chat-messages {
+  height: 23em;
+  overflow-y: scroll;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.message {
+  padding: 0.625em;
+  border-radius: 1em;
+  margin-bottom: 0.625em;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 0.31em;
+}
+
+.message-text {
+  font-size: 1em;
+  margin-bottom: 0.31em;
+  word-wrap: break-word;
+}
+
+.message-timestamp {
+  font-size: 0.75em;
+  text-align: right;
+}
+
+.blue-bg {
+  background-color: #1c9bef;
+}
+
+.gray-bg {
+  background-color: #3d5365;
+}
+
+.chat-input-form {
+  display: flex;
+  align-items: center;
+  margin-top: 2em;
+  gap: 0.625em;
+}
+
+.chat-input {
+  padding: 0.625em;
+  border: none;
+  border-radius: 0.5em;
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1em;
+  flex-grow: 1;
+}
+
+.send-button {
+  background-color: #1c9bef;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.clear-chat-button {
+  display: block;
+  margin: 2.5em auto;
 }
